@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./vanilla-style.css" type="text/css">
+    <script src="./vanilla-script.js" type="text/javascript" defer></script>
+    <title>Vanilla Page</title>
+</head>
+<body>
+    <header class="l-header">
+        <div class="c-header__element s-header__logo">
+            <h1>VANILLA</h1>
+        </div>
+        <nav class="c-header__element s-header__nav">
+            <button class="s-nav__login-btn" id="js-header__login-btn">Login</button>
+            <button class="s-nav__collapse-btn" id="js-nav__collapse"><i class="fa-solid fa-bars"></i></button>
+            <ul class="c-nav__list">
+                <li class="c-list__item"><a href="#" class="s-nav__link">Home</a></li>
+                <li class="c-list__item"><a href="#" class="s-nav__link">About</a></li>
+                <li class="c-list__item"><a href="#" class="s-nav__link">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <div class="c-main__container s-main__top-main">
+
+            <div class="c-top-main__form-box" id="js-form-box__login">
+                <button class="c-form-box__btn-hide js-btn__hide-form"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Login</h2>
+                <form class="s-form__login" novalidate>
+
+                    <div class="c-form__input-box">
+                        <input type="text" name="email_Name" class="js-input__email" id="email_ID" autocomplete="off" required>
+                        <label for="email_ID">Email</label>                       
+                        <span><i class="fa-solid fa-envelope"></i></span> 
+                    </div>
+
+                    <div class="c-form__input-box">
+                        <input type="password" name="password_Name" class="js-input__password" id="password_ID" required>
+                        <label for="password_ID">Password</label>                     
+                        <span><i class="fa-solid fa-lock"></i></span>   
+                    </div>
+
+                    <div class="s-form__forget-remember">
+                        <label>
+                            <input type="checkbox" name="remember">
+                            Remember me
+                        </label>
+                        <span>
+                            <a href="#" id="js-link__reset">Forgot Password?</a>
+                        </span>
+                    </div>
+
+                    <button class="c-form__btn">Login</button>
+
+                    <div class="s-form__login-register">
+                        <p>
+                            Don't have an account? 
+                            <a href="#" id="js-link__register">Register</a>
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="c-top-main__form-box" id="js-form-box__register">
+                <button class="c-form-box__btn-hide js-btn__hide-form"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Register</h2>
+                <form class="s-form__register" novalidate>
+
+                    <div class="c-form__input-box">
+                        <input type="text" name="user_Name" class="js-input__username" id="username_ID" autocomplete="off" required>
+                        <label for="username_ID">Username</label>
+                        <span><i class="fa-solid fa-user"></i></span>
+                    </div>
+
+                    <div class="c-form__input-box">
+                        <input type="text" name="email_Name" class="js-input__email" id="email_ID-2" autocomplete="off" required>
+                        <label for="email_ID-2">Email</label>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                    </div>
+
+                    <div class="c-form__input-box">
+                        <input type="password" name="password_Name" class="js-input__password" id="password_ID-2" required>
+                        <label for="password_ID-2">Password</label>
+                        <span><i class="fa-solid fa-lock"></i></span> 
+                    </div>
+
+                    <button class="c-form__btn">Register</button>
+                </form>
+            </div>
+
+            <div class="c-top-main__form-box" id="js-form-box__reset">
+                <button class="c-form-box__btn-hide js-btn__hide-form"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Reset Password</h2>
+                <form class="s-form__reset-password" novalidate>
+
+                    <div class="c-form__input-box">
+                        <input type="text" name="user_Name" class="js-input__username" id="username_ID-2" autocomplete="off" required>
+                        <label for="username_ID-2">Username</label>
+                        <span><i class="fa-solid fa-user"></i></span>                                                          
+                    </div>
+
+                    <div class="c-form__input-box">
+                        <input type="text" name="email_Name" class="js-input__email" id="email_ID-3" autocomplete="off" required>
+                        <label for="email_ID-3">Email</label>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                    </div>
+
+                    <button class="c-form__btn">Send Message</button>
+
+                </form>
+            </div>
+
+            <div class="c-top-main__notification">
+                <div class="c-notification-box s-notification-box__incorrect js-notf__incorrect">
+                    <div class="c-notf-box__progress js-notf__progress"></div>
+                    <div class="c-notf-box__text">
+                        <p>Credentials are incorrect.</p>
+                    </div>
+                </div>
+
+                <div class="c-notification-box s-notification-box__correct js-notf__correct">
+                    <div class="c-notf-box__progress js-notf__progress"></div>
+                    <div class="c-notf-box__text">
+                        <p>Credentials are correct.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

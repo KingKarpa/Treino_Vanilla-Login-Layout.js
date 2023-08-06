@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+/* ==== RESPONSIVE LAYOUT LOGIN/REGISTER PAGE -- VANILLA CSS & JS ==== */
+/* === Header Style === */
+.l-header{
+    background: hsl(0 0% 100% / 0.25);
+    backdrop-filter: blur(.25em);
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4em 1em .4em 4em;
+    z-index: 999;
+}
+
+.s-header__logo h1{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    user-select: none;
+}
+
+.s-header__nav{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.s-header__nav .s-nav__login-btn{
+    background: rgb(100, 20, 20);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: .4em 1.6em;
+    border: none;
+    border-radius: 3px;
+}
+
+.s-header__nav .s-nav__collapse-btn{
+    background: transparent;
+    border: none;
+    color: rgb(100, 20, 20);
+    font-size: 1.5em;
+    padding: .4em .8em;
+}
+.s-nav__collapse-btn > i{
+    width: 24px;
+    height: 24px;
+}
+
+.s-header__nav .c-nav__list{
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(.25em);
+    height: 100vh;
+    width: 60%;
+    max-width: 320px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    right: -100%;
+    top: 68px;
+    bottom: 0;
+}
+.c-nav__list .c-list__item{
+    width: 90%;
+    text-align: center;
+}
+.c-list__item .s-nav__link{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em 0;
+    color: rgb(100, 20, 20);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.c-nav__list .c-list__item:not(:last-child){
+    border-bottom: 1px solid rgb(100, 20, 20);
+}
+
+/* === Main Style === */
+.l-main{
+    height: auto;
+    width: 100vw;
+}
+.c-main__container.s-main__top-main{
+    background: url(./background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* == Form Style == */
+.c-top-main__form-box{
+    display: flex;
+    background: hsl(0 75% 40% / .3);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 440px;
+    flex-direction: column;
+    gap: .5em;
+    border-radius: 8px;
+    padding: 3em 1.5em;
+}
+
+/* = General Form Style = */
+.c-form-box__btn-hide{
+    background: rgb(100, 20, 20);
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    border: none;
+    border-radius: 0px 8px 0px 8px;
+    padding: .8em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.c-top-main__form-box h2{
+    align-self: center;
+    color: rgb(100, 20, 20);
+    font-size: 1.5em;
+    font-weight: 600;
+    user-select: none;
+}
+
+.c-top-main__form-box form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+form .c-form__input-box{
+    width: 100%;
+    position: relative;
+    height: 50px;
+    border-bottom: 2px solid rgb(100, 20, 20);
+}
+.c-form__input-box > *{
+    position: absolute;
+}
+
+.c-form__input-box input{
+    background: transparent;
+    width: 90%;
+    border: none;
+    bottom: 0;
+    font-size: 1em;
+}
+.c-form__input-box label {
+    top: 50%;
+    left: 5px;
+    color: rgb(100, 20, 20);
+    font-weight: 400;
+    pointer-events: none;
+}
+.c-form__input-box span{
+    width: 10%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(100, 20, 20);
+    font-size: 1.1em;
+    line-height: 28px;
+}
+
+.c-top-main__form-box .c-form__btn{
+    background: rgb(100, 20, 20);
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: .5em 0;
+    cursor: pointer;
+}
+
+/* Login Form Style */
+.c-top-main__form-box .s-form__forget-remember{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: .9em;
+    color: rgb(100, 20, 20);
+}
+.s-form__forget-remember *{
+    color: rgb(100, 20, 20);
+    font-weight: 500;
+}
+
+.c-top-main__form-box .s-form__login-register{
+    width: 100%;
+    text-align: center;
+}
+.s-form__login-register p,
+.s-form__login-register p a{
+    color: rgb(100, 20, 20);
+    user-select: none;
+}
+.s-form__login-register p a{
+    font-weight: 600;
+}
+
+/* === Notification-box Style === */
+.c-notification-box{
+    position: absolute;
+    height: 75px;
+    width: 250px;
+    background: hsl(0 0% 100% / 0.1);
+    bottom: 0;
+    right: 0;
+    margin: 0em 1em 1em 0em;
+    border-radius: 5px;
+    opacity: 0;
+    user-select: none;
+}
+
+.c-notf-box__progress{
+    height: 10%;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.s-notification-box__incorrect .c-notf-box__progress{
+    background: red;
+}
+.s-notification-box__correct .c-notf-box__progress{
+    background: green;
+}
+
+.c-notf-box__text{
+    backdrop-filter: blur(3px);
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.s-notification-box__incorrect .c-notf-box__text{
+    background: rgba(255, 0, 0, .2);
+}
+.s-notification-box__correct .c-notf-box__text{
+    background: rgba(0, 255, 0, .2);
+}
+
+/* === Transitions & Animations === */
+.s-header__nav .c-nav__list{
+    transition-duration: .5s;
+    transition-property: right;
+}
+.c-nav__list.u-nav__list--show{
+    right: 0;
+}
+
+.c-main__container .c-top-main__form-box{
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center;
+    transition: .4s transform;
+}
+.c-top-main__form-box.u-form-box--show{
+    transform: scale(1);
+}
+
+.c-form__input-box label{
+    transition-duration: .3s;
+    transition-property: top;
+}
+.c-form__input-box input:focus ~ label, 
+.c-form__input-box input:hover ~ label,
+.c-form__input-box input:valid ~ label{
+    top: 0;
+}
+
+.c-form__input-box span i{
+    font-size: 1em;
+    transition: .5s font-size;
+}
+.c-form__input-box span i.fa-shake{
+    animation-duration: .75s;
+    font-size: 1.3em;
+}
+
+.c-notf-box__progress{
+    transition: .25s width;
+}
+
+
+/* @=== MEDIA QUERIES ===@ */
+@media (min-width: 992px){
+    /* === MEDIA QUERIES: Header Style === */
+    .l-header{
+        background: transparent;
+        backdrop-filter: unset;
+        padding: 1em 4em;
+    }
+
+    .s-header__nav{
+        gap: 3em;
+    }
+
+    .s-header__nav .s-nav__login-btn{
+        background: transparent;
+        color: rgb(100, 20, 20);
+        order: 2;
+        border: 2px solid rgb(100, 20, 20);
+        font-weight: 600;
+        padding: .4em 1.6em;
+        cursor: pointer;
+    }
+
+    .s-header__nav .s-nav__collapse-btn{
+        display: none;
+        pointer-events: none;
+    }
+    .s-header__nav .c-nav__list{
+        background: none;
+        backdrop-filter: unset;
+        height: auto;
+        width: auto;
+        max-width: unset;
+        position: static;
+        flex-direction: row;
+        gap: 2em;
+        transition-duration: unset;
+        transition-property: unset;
+    }
+    .c-nav__list .c-list__item{
+        width: auto;
+    }
+    .c-list__item .s-nav__link{
+        width: auto;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .c-nav__list .c-list__item:not(:last-child){
+        border-bottom: none;
+    }
+
+    /* == Header Transitions == */
+    .s-header__nav .s-nav__login-btn{
+        transition-duration: .5s;
+        transition-property: background, color;
+    }
+    .s-nav__login-btn:hover{
+        background: rgb(100, 20, 20);
+        color: #fff;
+    }
+
+    .c-nav__list .c-list__item .s-nav__link::after{
+        content: '';
+        background: rgb(100, 20, 20);
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        transform: scaleX(0);
+        transition-duration: .3s;
+        transition-property: transform;
+    }
+    .c-list__item:hover .s-nav__link::after{
+        transform-origin: center;
+        transform: scaleX(1);
+    }
+
+    /* = Form Transitions = */
+    .c-form-box__btn-hide{
+        transition: .4s padding;
+    }
+    .c-form-box__btn-hide:hover{
+        padding: .9em;
+    }
+}
