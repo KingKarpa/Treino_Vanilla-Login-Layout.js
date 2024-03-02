@@ -1,4 +1,4 @@
-# Treino_Vanilla-Login-Layout
+# Vanilla-Login-Layout
 Olá, eu sou Karpa (Nícolas).
 Esta é uma página criada com intuito de treinar minhas habilidades frontEnd. O objetivo foi desenvolver uma página de login fictícia usando apenas JavaScript, CSS e HTML, contando com um layout responsivo e com transições.
 <br>
