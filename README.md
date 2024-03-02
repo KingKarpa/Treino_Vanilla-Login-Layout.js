@@ -9,4 +9,4 @@ Esta é uma página criada com intuito de treinar minhas habilidades frontEnd. O
 <br>
 Neste projeto gostaria de destacar o aprendizado que tive em relação aos seletores DOM e EventListeners.
 
-Para dar uma olhada siga o link: <a href="https://kingkarpa.github.io/Treino_Vanilla-Login-Layout/">Teste Aqui</a>
+Para dar uma olhada siga o link: <a href="https://kingkarpa.github.io/Treino_Vanilla-Login-Layout.js/">Teste Aqui</a>
